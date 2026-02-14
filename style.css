@@ -1,0 +1,12 @@
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+  min-height: 100vh;
+}
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
