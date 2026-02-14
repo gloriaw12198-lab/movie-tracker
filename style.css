@@ -15,3 +15,17 @@ header {
   text-decoration: none;
   font-weight: bold;
 }
+main {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
