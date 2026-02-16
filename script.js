@@ -49,4 +49,12 @@ const newItem = {
   }
 });
 
+function displayItems(container) {
+  const items = getItems();
+  container.innerHTML = "";
+
+  if (items.length === 0) {
+    container.innerHTML = "<p>📭 No entries yet. Add some!</p>";
+    return;
+  }
 
