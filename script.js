@@ -57,4 +57,9 @@ function displayItems(container) {
     container.innerHTML = "<p>📭 No entries yet. Add some!</p>";
     return;
   }
+  items.forEach(function (item) {
+    const card = document.createElement("div");
+    card.className = "item-card";
+
+    const icon = item.type === "Book" ? "📖" : "🎬";
 
