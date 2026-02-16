@@ -17,12 +17,22 @@ function getItems() {
       const notes = document.getElementById("notes").value.trim();
       const status = document.getElementById("status").value;
       const error = document.getElementById("error");  
-      
+
       if (title === "" || creator === "") {
         error.textContent = "⚠️ Please fill in all required fields.";
         error.style.color = "red";
         return;
       }
+const newItem = {
+        id: Date.now(),
+        type: type,
+        title: title,
+        creator: creator,
+        rating: rating,
+        notes: notes,
+        status: status
+      };
+
 
 
 
