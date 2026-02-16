@@ -34,5 +34,13 @@ const newItem = {
       };
 
 
+ const items = getItems();
+      items.push(newItem);
+      saveItems(items);
+        error.textContent = "✅ Entry saved successfully!";
+      error.style.color = "green";
+      form.reset();
+    });
+  }
 
 
