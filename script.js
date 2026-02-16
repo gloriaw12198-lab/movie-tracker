@@ -61,5 +61,37 @@ function displayItems(container) {
     const card = document.createElement("div");
     card.className = "item-card";
 
-    const icon = item.type === "Book" ? "📖" : "🎬";
+    const icon = item.type === "Book" ? "📖" : "🎬"; 
+    card.innerHTML = `
+      <h3>${icon} ${item.title}</h3>
+      <p><strong>Author / Director:</strong> ${item.creator}</p>
+      <p><strong>Status:</strong> ${item.status}</p>
+      ${item.rating ? `<p><strong>Rating:</strong> ⭐ ${item.rating}/5</p>` : ""}
+      ${item.notes ? `<p><strong>Notes:</strong> ${item.notes}</p>` : ""}
+      <button class="delete-btn" data-id="${item.id}">🗑️ Delete</button>
+    `;
+      container.appendChild(card);
+  });
+
+  addDeleteEvents(container);
+}
+function addDeleteEvents(container) {
+  const buttons = container.querySelectorAll(".delete-btn");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const id = Number(this.getAttribute("data-id"));
+
+      let items = getItems();
+      items = items.filter(function (item) {
+        return item.id !== id;
+      });
+
+      saveItems(items);
+      displayItems(container);
+    });
+  });
+}
+
+
 
