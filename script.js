@@ -42,5 +42,11 @@ const newItem = {
       form.reset();
     });
   }
+   const container = document.getElementById("itemsContainer");
+
+  if (container) {
+    displayItems(container);
+  }
+});
 
 
