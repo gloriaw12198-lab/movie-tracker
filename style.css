@@ -1,31 +1,104 @@
-body {
-  font-family: Poppins, sans-serif;
-  margin: 0;
-  background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
+
+body {
+  margin: 0;
+  background: #f6f2fb;
+  color: #333;
+}
+
 header {
-  background-color: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #6a4c93, #9d4edd);
+  color: white;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}nav a {
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+nav a {
   color: white;
-  margin: 0 12px;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
-main {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
+
+nav a:hover {
+  text-decoration: underline;
 }
 
-.card {
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
   width: 100%;
-  max-width: 500px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  margin-top: 15px;
+  background: #6a4c93;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #5a3d82;
+}
+
+.item-card {
+  border-left: 6px solid #9d4edd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #faf8ff;
+}
+
+.delete-btn {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
 }

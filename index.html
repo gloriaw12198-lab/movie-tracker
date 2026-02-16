@@ -1,52 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie & Book Tracker</title>
+  <title>📚🎬 Book & Movie Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="entries.html">➕ Add Entry</a>
+  <a href="about.html">ℹ️ About</a>
+</nav>
+
 <header>
-  <h1>🎬📚 Movie & Book Tracker</h1>
-  <nav>
-    <a href="index.html">Add Entry</a>
-    <a href="entries.html">View Entries</a>
-    <a href="about.html">About</a>
-  </nav>
+  <h1>📚🎬 Book & Movie Tracker</h1>
+  <p>Organize, track, and remember every story you experience ✨</p>
 </header>
+
 <main>
-  <section class="card">
-    <h2>Add a New Entry ✍️</h2>
-
-    <p id="summary"></p>
-
-    <form id="entryForm">
-      <label>Type</label>
-      <select id="type" required>
-        <option value="">Select</option>
-        <option value="Movie">🎬 Movie</option>
-        <option value="Book">📚 Book</option>
-      </select>
-
-      <label>Title</label>
-      <input type="text" id="title" placeholder="Enter title" required>
-
-      <label>Author / Director</label>
-      <input type="text" id="author" placeholder="Enter name" required>
-
-      <label>Rating (1–5)</label>
-      <input type="number" id="rating" min="1" max="5" required>
-
-      <button type="submit">➕ Add Entry</button>
-    </form>
+  <section>
+    <h2>👋 Welcome!</h2>
+    <p>
+      This tracker helps you keep a personal record of all the
+      <strong>books you read</strong> and <strong>movies you watch</strong>.
+      You can see their details, track progress, and manage your list easily.
+    </p>
   </section>
-  </main>
-  <footer>
-  <p>Made with ❤️ | 2026</p>
+  <section>
+    <h2>⚙️ How It Works</h2>
+    <ul>
+      <li>➕ Add a book or movie from the <strong>Add Entry</strong> page</li>
+      <li>💾 Your data is saved automatically</li>
+      <li>👀 View full details below</li>
+      <li>🗑️ Delete entries you no longer need</li>
+    </ul>
+  </section>
+  <section>
+    <h2>📖🎥 Your Saved Entries</h2>
+    <p>Here’s a list of everything you’ve added so far:</p>
+    <div id="itemsContainer"></div>
+  </section>
+</main>
+
+<footer>
+  <p>✨ Happy tracking! ✨</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-

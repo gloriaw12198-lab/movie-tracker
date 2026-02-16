@@ -2,33 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>View Entries</title>
+  <title>➕ Add Entry</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav>
+  <a href="index.html">🏠 Home</a>
+  <a href="entries.html">➕ Add Entry</a>
+  <a href="about.html">ℹ️ About</a>
+</nav>
+
 <header>
-  <h1>📊 Your Entries</h1>
-  <nav>
-    <a href="index.html">Add Entry</a>
-    <a href="entries.html">View Entries</a>
-    <a href="about.html">About</a>
-  </nav>
+  <h1>➕ Add a New Book or Movie</h1>
+  <p>Fill in the details below to save your entry 📌</p>
 </header>
+
 <main>
   <section>
-    <p id="summary"></p>
-    <ul id="entryList"></ul>
+    <h2>📝 Instructions</h2>
+    <p>
+      Use this form to add either a <strong>book</strong> or a <strong>movie</strong>.
+      Be as detailed as you like — notes are optional but helpful!
+    </p>
+  </section>
+  <form id="itemForm">
+    <label>📌 Type</label>
+    <select id="type" required>
+      <option value="Book">📖 Book</option>
+      <option value="Movie">🎬 Movie</option>
+    </select>
+
+    <label>📚 Title</label>
+    <input type="text" id="title" placeholder="Enter title" required>
+
+    <label>✍️ Author / Director</label>
+    <input type="text" id="creator" placeholder="Enter name" required>
+
+    <label>⭐ Rating (1–5)</label>
+    <input type="number" id="rating" min="1" max="5" placeholder="Optional">
+
+    <label>📝 Notes</label>
+    <textarea id="notes" placeholder="Your thoughts, review, or favorite scenes"></textarea>
+
+    <label>📊 Status</label>
+    <select id="status">
+      <option value="Completed">✅ Completed</option>
+      <option value="In Progress">⏳ In Progress</option>
+      <option value="Wishlist">💭 Wishlist</option>
+    </select>
+
+    <button type="submit">💾 Save Entry</button>
+    <p id="error"></p>
+  </form>
+  <section>
+    <h2>💡 Tips</h2>
+    <ul>
+      <li>⭐ Rate entries to remember your favorites</li>
+      <li>📝 Use notes to track reviews or quotes</li>
+      <li>📊 Update status as you progress</li>
+    </ul>
   </section>
 </main>
 
 <footer>
-  <p>Movie & Book Tracker © 2026</p>
+  <p>📚 Every story matters.</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
