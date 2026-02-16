@@ -102,16 +102,16 @@ footer {
   padding: 15px;
   background: #eee;
 }
+  @media (max-width: 600px) {
   nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-@media (max-width: 600px) {
-  nav {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  nav a {
+    font-size: 1.4rem; 
+    padding: 8px 0;
   }
 }
